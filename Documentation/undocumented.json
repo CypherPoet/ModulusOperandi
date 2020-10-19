@@ -1,0 +1,26 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/briansipple/Projects/swift/Packages/ModulusOperandi/Sources/Modulo.swift",
+      "line": 6,
+      "symbol": "Numeric.modulo(_:mode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/briansipple/Projects/swift/Packages/ModulusOperandi/Sources/Modulo.swift",
+      "line": 25,
+      "symbol": "Numeric.modulo(_:mode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/briansipple/Projects/swift/Packages/ModulusOperandi/Sources/ModulusMode.swift",
+      "line": 4,
+      "symbol": "ModulusMode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/briansipple/Projects/swift/Packages/ModulusOperandi"
+}

@@ -51,7 +51,7 @@ You can add `ModulusOperandi` as a dependency in your `Package.swift` file:
 let package = Package(
     //...
     dependencies: [
-        .package(url: "https://github.com/CypherPoet/ModulusOperandi", from: "0.1.0"),
+        .package(url: "https://github.com/CypherPoet/ModulusOperandi", from: "0.2.0"),
     ],
     //...
 )

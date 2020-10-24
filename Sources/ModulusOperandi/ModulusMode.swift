@@ -1,7 +1,7 @@
 import Foundation
 
 
-public enum ModulusMode {
+public enum ModulusMode: String, CaseIterable {
 
     /// The `remainder` is always positive.
     case euclidean

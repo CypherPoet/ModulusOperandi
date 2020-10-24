@@ -28,12 +28,12 @@ _Declarative, configurable modular arithmetic for Swift Integers and Floating-Po
 <!-- ![ModulusOperandi Header Image](./Resources/Screenshots/header.png) -->
 
 
-
 ## Features
 
 - [x] Declarative API that allows choosing between [Euclidean](https://en.wikipedia.org/wiki/Euclidean_division#Division_theorem), [Truncating](https://developer.apple.com/documentation/swift/float/2886166-truncatingremainder), or [Flooring](https://www.sololearn.com/Discuss/1453039/floor-division-and-modulo-operator) Modular Arithmetic.
 - [x] Euclidean by default.
 - [x] Support for conformances to `BinaryInteger`  and  `FloatingPointInteger`.
+- [x] Command Line tool for performing calculations in the Terminal.
 
 
 ## Installation
@@ -111,10 +111,47 @@ dividend.modulo(-3, mode: .truncating)   // 2
 ```
 
 
+
+ntation](https://github.com/apple/swift-package-manager/tree/master/Documentation).
+
+## Command Line Tool
+
+`ModulusOperandi` also ships with a command line tool that lets you perform calculations directly from the command line.
+
+To install it, clone the project and run `make`:
+
+```
+$ git clone git@github.com:CypherPoet/ModulusOperandi.git
+$ cd Ink
+$ make
+```
+
+The command line tool will be installed as `modulo`, and running `modulo --help` will present some helpful usage instructions:
+
+```sh
+modulo --help
+```
+
+```sh
+Multifaceted modular arithmetic for Swift integers and floating-Point types
+
+USAGE: modulo <dividend> <divisor> [--euclidean] [--flooring] [--truncating]
+
+ARGUMENTS:
+  <dividend>              The dividend to perform division against.
+  <divisor>               The divisor to use as a "modulus".
+
+OPTIONS:
+  --euclidean/--flooring/--truncating
+                          The algorithm to use for computing results. (default: euclidean)
+  --version               Show the version.
+  -h, --help              Show help information.
+```
+
+
 ## Contributing
 
 Contributions to `ModulusOperandi` are most welcome. Check out some of the [issue templates](./.github/ISSUE_TEMPLATE/) for more info.
-
 
 
 ## Developing

@@ -1,7 +1,7 @@
 # ModulusOperandi
 
 <p align="center">
-   <img width="600px" src="./Resources/Assets/banner-logo.png" alt="Banner Logo">
+   <img width="600px" src="./Resources/Assets/banner-logo-2.png" alt="Banner Logo">
 </p>
 
 <p>
@@ -56,7 +56,7 @@ You can add `ModulusOperandi` as a dependency in your `Package.swift` file:
 let package = Package(
     //...
     dependencies: [
-        .package(url: "https://github.com/CypherPoet/ModulusOperandi", from: "0.2.1"),
+        .package(url: "https://github.com/CypherPoet/ModulusOperandi", from: "0.2.2"),
     ],
     //...
 )

@@ -10,6 +10,9 @@ func parseNumberArgument(_ string: String) -> Double? {
 }
 
 let negativeNumberDiscussion = """
+📝 Note on Negative Numbers
+----------------------------------------------
+
 To use negative numbers, prefix the argument with `\\ ` (including the space).
 
 For example, -5 mod 4 would be passed as:
@@ -17,7 +20,12 @@ For example, -5 mod 4 would be passed as:
 
 -5 mod -4 would be passed as:
     modulo \\ -5 \\ -4
+"""
 
+let moreInfoDiscussion = """
+🔗 More Info On Modular Arithmetic
+----------------------------------------------
+    - https://en.wikipedia.org/wiki/Modulo_operation#Variants_of_the_definition
 """
 
 
@@ -27,8 +35,7 @@ struct ModulusOperandiCLI {
         help: ArgumentHelp(
             """
             The dividend to perform division against.
-            """,
-            discussion: negativeNumberDiscussion
+            """
         ),
         transform: parseNumberArgument
     )
@@ -39,8 +46,7 @@ struct ModulusOperandiCLI {
         help: ArgumentHelp(
             """
             The divisor to use as a "modulus".
-            """,
-            discussion: negativeNumberDiscussion
+            """
         ),
         transform: parseNumberArgument
     )
@@ -54,7 +60,6 @@ struct ModulusOperandiCLI {
         """
     )
     var mode: ModulusOperandi.ModulusMode = .euclidean
-
 }
 
 
@@ -70,12 +75,17 @@ extension ModulusOperandiCLI: ParsableCommand {
         Modular arithmetic algorithms come in variants that use either Euclidean, truncating, \
         or flooring division.
 
-        (🔗 See: https://en.wikipedia.org/wiki/Modulo_operation#Variants_of_the_definition)
-
         This tool acts as a CLI for the `ModulusOperandi` Swift package -- which allows you to perform \
         modular arithmetic according to your desired algorithm.
+
+
+        \(negativeNumberDiscussion)
+
+
+        \(moreInfoDiscussion)
+
         """,
-        version: "0.2.0",
+        version: "0.2.2",
         shouldDisplay: true,
         subcommands: []
     )

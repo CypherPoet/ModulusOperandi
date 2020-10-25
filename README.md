@@ -19,7 +19,11 @@
 
 <p align="center">
 
-_Declarative, configurable modular arithmetic for Swift Integers and Floating-Point types._
+_Declarative, multi-algorithm modular arithmetic for Swift Integers and Floating-Point types._
+
+Modular arithmetic algorithms [come in variants that use either Euclidean, truncating, or flooring division](https://en.wikipedia.org/wiki/Modulo_operation#Variants_of_the_definition). Furthermore, Swift's built-in `%` operator &mdash; while used as a modulus in some languages &mdash; is [strictly used as a _remainder_ operator](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID64).
+
+These nuances can lead modular arithmetic code that's ambiguous in both intent and correctness &mdash; which is what `ModulusOperandi` attempts to solve.
 
 <p />
 
@@ -30,10 +34,10 @@ _Declarative, configurable modular arithmetic for Swift Integers and Floating-Po
 
 ## Features
 
-- [x] Declarative API that allows choosing between [Euclidean](https://en.wikipedia.org/wiki/Euclidean_division#Division_theorem), [Truncating](https://developer.apple.com/documentation/swift/float/2886166-truncatingremainder), or [Flooring](https://www.sololearn.com/Discuss/1453039/floor-division-and-modulo-operator) Modular Arithmetic.
-- [x] Euclidean by default.
-- [x] Support for conformances to `BinaryInteger`  and  `FloatingPointInteger`.
-- [x] Command Line tool for performing calculations in the Terminal.
+- ✅ Declarative API that allows for choosing between [Euclidean](https://en.wikipedia.org/wiki/Euclidean_division#Division_theorem), [Truncating](https://developer.apple.com/documentation/swift/float/2886166-truncatingremainder), or [Flooring](https://www.sololearn.com/Discuss/1453039/floor-division-and-modulo-operator) Modular Arithmetic.
+- ✅ Euclidean by default.
+- ✅ Support for conformances to `BinaryInteger` and `FloatingPointInteger`.
+- ✅ Command Line tool for performing calculations in the Terminal.
 
 
 ## Installation

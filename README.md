@@ -1,5 +1,9 @@
 # ModulusOperandi
 
+<p align="center">
+   <img width="600px" src="./Resources/Assets/banner-logo.png" alt="Banner Logo">
+</p>
+
 <p>
     <img src="https://img.shields.io/badge/Swift-5.3-F06C33.svg" />
     <img src="https://img.shields.io/badge/iOS-13.0+-865EFC.svg" />
@@ -27,9 +31,6 @@ These nuances can lead modular arithmetic code that's ambiguous in both intent a
 
 <p />
 
-
-<!-- [[ Header Screenshot ]] -->
-<!-- ![ModulusOperandi Header Image](./Resources/Screenshots/header.png) -->
 
 
 ## Features

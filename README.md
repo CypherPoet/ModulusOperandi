@@ -122,7 +122,7 @@ To install it, clone the project and run `make`:
 
 ```
 $ git clone git@github.com:CypherPoet/ModulusOperandi.git
-$ cd Ink
+$ cd ModulusOperandiCLI
 $ make
 ```
 
@@ -133,7 +133,10 @@ modulo --help
 ```
 
 ```sh
-Multifaceted modular arithmetic for Swift integers and floating-Point types
+Modular arithmetic algorithms can use either Euclidean, truncating, or flooring division (🔗 see https://en.wikipedia.org/wiki/Modulo_operation#Variants_of_the_definition).
+
+This tool acts as a CLI for the `ModulusOperandi` Swift package -- which allows you to perform modular arithmetic
+according to the algorithm of your choice.
 
 USAGE: modulo <dividend> <divisor> [--euclidean] [--flooring] [--truncating]
 
@@ -148,6 +151,28 @@ OPTIONS:
   -h, --help              Show help information.
 ```
 
+### Negative Numbers
+
+Disambiguating negative numbers from argument flags is a notorious challenge for Command Line interfaces. Currently, support for this in Swift's Argument Parser appears to be an [ongoing area of development](https://github.com/apple/swift-argument-parser/issues/31), In the meantime, though, the `modulo` command can take negative-number arguments via some clever escape syntax.
+
+**Simply prefix any negative number with `\ ` (including the space). Like so:**
+
+`-5 mod 4`:
+```sh
+modulo \ -5 4
+```
+
+`-5 mod -4`:
+```sh
+modulo \ -5 \ -4
+```
+
+`5 mod -4`:
+```sh
+modulo 5 \ -4
+```
+
+🔑 The
 
 ## Contributing
 

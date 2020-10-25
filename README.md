@@ -115,10 +115,9 @@ dividend.modulo(-3, mode: .truncating)   // 2
 ```
 
 
-
-ntation](https://github.com/apple/swift-package-manager/tree/master/Documentation).
-
 ## Command Line Tool
+
+![ModulusOperandi CLI Examples](./Resources/Screenshots/cli-examples.png)
 
 `ModulusOperandi` also ships with a command line tool that lets you perform calculations directly from the command line.
 

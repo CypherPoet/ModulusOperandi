@@ -172,8 +172,6 @@ modulo \ -5 \ -4
 modulo 5 \ -4
 ```
 
-🔑 The
-
 ## Contributing
 
 Contributions to `ModulusOperandi` are most welcome. Check out some of the [issue templates](./.github/ISSUE_TEMPLATE/) for more info.

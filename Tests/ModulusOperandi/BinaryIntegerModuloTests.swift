@@ -168,4 +168,3 @@ extension BinaryIntegerModuloTests {
         XCTAssertEqual(dividend.modulo(divisor), 2)
     }
 }
-

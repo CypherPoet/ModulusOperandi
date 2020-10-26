@@ -170,3 +170,14 @@ extension BinaryFloatingPointModuloTests {
     }
 }
 
+
+// MARK: - Types
+extension BinaryIntegerModuloTests {
+
+    func test_types_performsModuloOnCGFloatTypes() throws {
+        let dividend: CGFloat = -3.0
+        let divisor: CGFloat = 5
+
+        XCTAssertEqual(dividend.modulo(divisor), 2)
+    }
+}

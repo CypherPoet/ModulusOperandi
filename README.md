@@ -188,7 +188,7 @@ OPTIONS:
 
 ### Negative Numbers
 
-Disambiguating negative numbers from argument flags is a notorious challenge for Command Line interfaces. Currently, support for this in Swift's Argument Parser appears to be an [ongoing area of development](https://github.com/apple/swift-argument-parser/issues/31), In the meantime, though, the `modulo` command can take negative-number arguments via some clever escape syntax.
+Disambiguating negative numbers from argument flags is a notorious challenge for Command Line interfaces. Currently, support for this in Swift's Argument Parser appears to be an [ongoing area of development](https://github.com/apple/swift-argument-parser/issues/31). In the meantime, though, the `modulo` command can take negative-number arguments via some clever escape syntax.
 
 **Simply prefix any negative number with `\ ` (including the space). Like so:**
 

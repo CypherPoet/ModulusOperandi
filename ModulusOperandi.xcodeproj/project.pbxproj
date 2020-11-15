@@ -101,7 +101,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		"ModulusOperandi::ModulusOperandi::Product" /* ModulusOperandi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ModulusOperandi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"ModulusOperandi::ModulusOperandi::Product" /* ModulusOperandi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ModulusOperandi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"ModulusOperandi::ModulusOperandiCLI::Product" /* ModulusOperandiCLI */ = {isa = PBXFileReference; lastKnownFileType = text; path = ModulusOperandiCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		"ModulusOperandi::ModulusOperandiTests::Product" /* ModulusOperandiTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ModulusOperandiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* ModulusMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulusMode.swift; sourceTree = "<group>"; };
@@ -146,9 +146,7 @@
 		OBJ_60 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		OBJ_61 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		OBJ_62 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/briansipple/Projects/swift/Packages/ModulusOperandi/.build/checkouts/swift-argument-parser/Package.swift"; sourceTree = "<group>"; };
-		OBJ_68 /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = SOURCE_ROOT; };
 		OBJ_69 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = SOURCE_ROOT; };
-		OBJ_70 /* Examples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Examples; sourceTree = SOURCE_ROOT; };
 		OBJ_71 /* Playgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Playgrounds; sourceTree = SOURCE_ROOT; };
 		OBJ_72 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = SOURCE_ROOT; };
 		OBJ_73 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -306,7 +304,7 @@
 			path = Parsing;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -314,15 +312,12 @@
 				OBJ_14 /* Tests */,
 				OBJ_18 /* Dependencies */,
 				OBJ_63 /* Products */,
-				OBJ_68 /* Documentation */,
 				OBJ_69 /* Resources */,
-				OBJ_70 /* Examples */,
 				OBJ_71 /* Playgrounds */,
 				OBJ_72 /* Scripts */,
 				OBJ_73 /* LICENSE */,
 				OBJ_74 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_53 /* Usage */ = {
@@ -490,7 +485,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_63 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -637,6 +632,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ModulusOperandi;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
@@ -665,6 +661,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ModulusOperandi;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;

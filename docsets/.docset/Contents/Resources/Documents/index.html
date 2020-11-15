@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+           Docs
+        </a>
+         (62% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/CypherPoet/ModulusOperandi">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html"> Reference</a>
+      <img class="carat" src="img/carat.png" />
+        Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ModulusMode.html">ModulusMode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Numeric.html">Numeric</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <h1 id='modulusoperandi' class='heading'>ModulusOperandi</h1>
+
+<p align="center">
+   <img width="600px" src="./Resources/Assets/banner-logo-2.png" alt="Banner Logo">
+</p>
+
+<p>
+    <img src="https://img.shields.io/badge/Swift-5.3-F06C33.svg" />
+    <img src="https://img.shields.io/badge/iOS-13.0+-865EFC.svg" />
+    <img src="https://img.shields.io/badge/iPadOS-13.0+-F65EFC.svg" />
+    <img src="https://img.shields.io/badge/macOS-10.14+-179AC8.svg" />
+    <img src="https://img.shields.io/badge/tvOS-13.0+-41465B.svg" />
+    <img src="https://img.shields.io/badge/watchOS-6.0+-1FD67A.svg" />
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
+    <a href="https://github.com/apple/swift-package-manager">
+      <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" />
+    </a>
+    <a href="https://twitter.com/cypher_poet">
+        <img src="https://img.shields.io/badge/Contact-@cypher_poet-lightgrey.svg?style=flat" alt="Twitter: @cypher_poet" />
+    </a>
+</p>
+
+<p><p align="center"></p>
+
+<p><em>Declarative, multi-algorithm modular arithmetic for Swift Integers and Floating-Point types.</em></p>
+
+<p>Modular arithmetic algorithms <a href="https://en.wikipedia.org/wiki/Modulo_operation#Variants_of_the_definition">come in variants that use either Euclidean, truncating, or flooring division</a>. Furthermore, Swift&rsquo;s built-in <code>%</code> operator &mdash; while used as a modulus in some languages &mdash; is <a href="https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID64">strictly used as a <em>remainder</em> operator</a>.</p>
+
+<p>These nuances can lead modular arithmetic code that&rsquo;s ambiguous in both intent and correctness &mdash; which is what <code>ModulusOperandi</code> attempts to solve.</p>
+
+<p><p /></p>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>✅ Declarative API that allows for choosing between <a href="https://en.wikipedia.org/wiki/Euclidean_division#Division_theorem">Euclidean</a>, <a href="https://developer.apple.com/documentation/swift/float/2886166-truncatingremainder">Truncating</a>, or <a href="https://www.sololearn.com/Discuss/1453039/floor-division-and-modulo-operator">Flooring</a> Modular Arithmetic.</li>
+<li>✅ Euclidean by default.</li>
+<li>✅ Support for conformances to <code>BinaryInteger</code> and <code>FloatingPointInteger</code>.</li>
+<li>✅ Command Line tool for performing calculations in the Terminal.</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='xcode-projects' class='heading'>Xcode Projects</h3>
+
+<p>Select <code>File</code> -&gt; <code>Swift Packages</code> -&gt; <code>Add Package Dependency</code> and enter <code>https://github.com/CypherPoet/ModulusOperandi</code>.</p>
+<h3 id='swift-package-manager-projects' class='heading'>Swift Package Manager Projects</h3>
+
+<p>You can add <code>ModulusOperandi</code> as a dependency in your <code>Package.swift</code> file:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="c1">//...</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/CypherPoet/ModulusOperandi"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.2.2"</span><span class="p">),</span>
+    <span class="p">],</span>
+    <span class="c1">//...</span>
+<span class="p">)</span>
+</code></pre>
+
+<p>Then simply <code>import ModulusOperandi</code> wherever you’d like to use it.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>After importing <code>ModulusOperandi</code> in a file, types that conform to <code>BinaryInteger</code>  and  <code>FloatingPointInteger</code> will be extended with a <code>modulus</code> function.</p>
+
+<p>This function treats its value as the <code>dividend</code> and takes a <code>divisor</code> of the same type. It also takes an optional <code>mode</code> argument to choose between Euclidean, Truncating, or Flooring Modular Arithmetic.</p>
+
+<p><strong>By default, the <code>mode</code> will be Euclidean</strong></p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">ModulusOperandi</span>
+
+<span class="k">let</span> <span class="nv">dividend</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">let</span> <span class="nv">divisor</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="n">divisor</span><span class="p">)</span>   <span class="c1">// 2</span>
+<span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="o">-</span><span class="n">divisor</span><span class="p">)</span>  <span class="c1">// 2</span>
+<span class="o">-</span><span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="n">divisor</span><span class="p">)</span>  <span class="c1">// -2</span>
+<span class="o">-</span><span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="o">-</span><span class="n">divisor</span><span class="p">)</span> <span class="c1">// -2</span>
+
+<span class="c1">// Same as...</span>
+<span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="n">divisor</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">euclidean</span><span class="p">)</span>     <span class="c1">// 2</span>
+<span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="o">-</span><span class="n">divisor</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">euclidean</span><span class="p">)</span>    <span class="c1">// 2</span>
+<span class="o">-</span><span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="n">divisor</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">euclidean</span><span class="p">)</span>    <span class="c1">// -2</span>
+<span class="o">-</span><span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="o">-</span><span class="n">divisor</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">euclidean</span><span class="p">)</span>   <span class="c1">// -2</span>
+</code></pre>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">ModulusOperandi</span>
+
+<span class="k">let</span> <span class="nv">dividend</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">let</span> <span class="nv">divisor</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">flooring</span><span class="p">)</span>    <span class="c1">// 2</span>
+<span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">flooring</span><span class="p">)</span>   <span class="c1">// -1</span>
+<span class="o">-</span><span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">flooring</span><span class="p">)</span>   <span class="c1">// -2</span>
+<span class="o">-</span><span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">flooring</span><span class="p">)</span>  <span class="c1">// 1</span>
+</code></pre>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">ModulusOperandi</span>
+
+<span class="k">let</span> <span class="nv">dividend</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">let</span> <span class="nv">divisor</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">truncating</span><span class="p">)</span>    <span class="c1">// 2</span>
+<span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">truncating</span><span class="p">)</span>   <span class="c1">// 2</span>
+<span class="o">-</span><span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">truncating</span><span class="p">)</span>   <span class="c1">// -2</span>
+<span class="o">-</span><span class="n">dividend</span><span class="o">.</span><span class="nf">modulo</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="n">truncating</span><span class="p">)</span>  <span class="c1">// -2</span>
+</code></pre>
+<h2 id='command-line-tool' class='heading'>Command Line Tool</h2>
+
+<p><img src="./Resources/Screenshots/cli-examples.png" alt="ModulusOperandi CLI Examples"></p>
+
+<p><code>ModulusOperandi</code> also ships with a command line tool that lets you perform calculations directly from the command line.</p>
+
+<p>To install it, clone the project and run <code>make</code>:</p>
+<pre class="highlight plaintext"><code>$ git clone git@github.com:CypherPoet/ModulusOperandi.git
+$ cd ModulusOperandiCLI
+$ make
+</code></pre>
+
+<p>The command line tool will be installed as <code>modulo</code>, and running <code>modulo --help</code> will present some helpful usage instructions:</p>
+
+<p></br></p>
+
+<details>
+<summary>See Help Menu</summary>
+
+&ldquo;`sh
+modulo &ndash;help
+&rdquo;`
+
+&ldquo;`sh
+OVERVIEW: Multi-algorithm modular arithmetic for Swift integers and
+floating-Point types.
+
+Modular arithmetic algorithms come in variants that use either Euclidean,
+truncating, or flooring division.
+
+This tool acts as a CLI for the `ModulusOperandi` Swift package &ndash; which allows
+you to perform modular arithmetic according to your desired algorithm.
+
+
+📝 Note on Negative Numbers
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+To use negative numbers, prefix the argument with `\ ` (including the space).
+
+For example, -5 mod 4 would be passed as:
+    modulo \ -5 4
+
+-5 mod -4 would be passed as:
+    modulo \ -5 \ -4
+
+
+🔗 More Info On Modular Arithmetic
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+    - https://en.wikipedia.org/wiki/Modulo_operation#Variants_of_the_definition
+
+
+USAGE: modulo <dividend> <divisor> [&ndash;euclidean] [&ndash;flooring] [&ndash;truncating]
+
+ARGUMENTS:
+  <dividend>              The dividend to perform division against.
+  <divisor>               The divisor to use as a &quot;modulus&rdquo;.
+
+OPTIONS:
+  &ndash;euclidean/&ndash;flooring/&ndash;truncating
+                          The algorithm to use for computing results. (default:
+                          euclidean)
+  &ndash;version               Show the version.
+  -h, &ndash;help              Show help information.
+
+&ldquo;`
+
+</details>
+
+<p></br></p>
+<h3 id='negative-numbers' class='heading'>Negative Numbers</h3>
+
+<p>Disambiguating negative numbers from argument flags is a notorious challenge for Command Line interfaces. Currently, support for this in Swift&rsquo;s Argument Parser appears to be an <a href="https://github.com/apple/swift-argument-parser/issues/31">ongoing area of development</a>. In the meantime, though, the <code>modulo</code> command can take negative-number arguments via some clever escape syntax.</p>
+
+<p><strong>Simply prefix any negative number with <code>\</code> (including the space). Like so:</strong></p>
+
+<p><code>-5 mod 4</code>:</p>
+<pre class="highlight shell"><code>modulo <span class="se">\ </span>-5 4
+</code></pre>
+
+<p><code>-5 mod -4</code>:</p>
+<pre class="highlight shell"><code>modulo <span class="se">\ </span>-5 <span class="se">\ </span>-4
+</code></pre>
+
+<p><code>5 mod -4</code>:</p>
+<pre class="highlight shell"><code>modulo 5 <span class="se">\ </span>-4
+</code></pre>
+<h2 id='contributing' class='heading'>Contributing</h2>
+
+<p>Contributions to <code>ModulusOperandi</code> are most welcome. Check out some of the <a href="./.github/ISSUE_TEMPLATE/">issue templates</a> for more info.</p>
+<h2 id='developing' class='heading'>Developing</h2>
+<h3 id='requirements' class='heading'>Requirements</h3>
+
+<ul>
+<li>Xcode 12.0+ (for developing)</li>
+</ul>
+<h3 id='generating-documentation' class='heading'>Generating Documentation</h3>
+
+<p>Documentation is generated by <a href="https://github.com/realm/jazzy">Jazzy</a>. Installation instructions can be found <a href="https://github.com/realm/jazzy#installation">here</a>, and as soon as you have it set up, docs can be generated simply by running <code>jazzy</code> from the command line.</p>
+
+<p>📝 Note that this will only generate the <code>docs</code> folder for you to view locally. This folder is being ignored by <code>git</code>, as an <a href="./.github/workflows/PublishDocumentation.yml">action</a> exists to automatically generate docs and serve them on the project&rsquo;s <code>gh-pages</code> branch.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p><code>ModulusOperandi</code> is available under the MIT license. See the <a href="./LICENSE">LICENSE file</a> for more info.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>Copyright 2020 CypherPoet</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

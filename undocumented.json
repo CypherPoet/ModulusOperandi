@@ -1,0 +1,26 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/ModulusOperandi/ModulusOperandi/Sources/ModulusOperandi/Modulo.swift",
+      "line": 6,
+      "symbol": "Numeric.modulo(_:mode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ModulusOperandi/ModulusOperandi/Sources/ModulusOperandi/Modulo.swift",
+      "line": 25,
+      "symbol": "Numeric.modulo(_:mode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ModulusOperandi/ModulusOperandi/Sources/ModulusOperandi/ModulusMode.swift",
+      "line": 4,
+      "symbol": "ModulusMode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/ModulusOperandi/ModulusOperandi"
+}
